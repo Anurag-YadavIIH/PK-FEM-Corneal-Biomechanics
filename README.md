@@ -58,6 +58,9 @@ The cornea contributes roughly two-thirds of the eye's total refractive power. E
 - Suture arc diameter: **0.03 mm** (matching 10-0 nylon specifications)
 - Eight uniformly spaced interrupted sutures in the baseline model
 
+![Corneal Geometry](figures/geometry/FEM%20Model.jpg)
+![Corneal Geometry](figures/surgical_scenarios/Graft%20and%20suture%20disorientation.jpg)
+
 ### Material Models
 | Component | Model | Key Parameters |
 |-----------|-------|----------------|
@@ -72,10 +75,14 @@ Only the stromal layer was modelled (≈90% of total corneal thickness), which p
 | Solid suture | Hex C3D8R + Tet C3D4 | 81,728 + 38,223 | 86,800 + 44,028 | 460 |
 | Constraint suture | Hex C3D8R + Truss T3D2 | 108,000 | 81,000 | 380 |
 
+![Corneal Geometry](figures/meshing/Meshing%20of%203D%20model.jpg)
+
 ### Loading & Boundary Conditions
 - Intraocular pressure (IOP): **15 mmHg** applied uniformly on the posterior corneal surface
 - Boundary condition: pinned at the host limbal periphery (48°)
 - Suture prestress: applied via displacement boundary condition (3–5% of bite length)
+
+![Corneal Geometry](figures/boundary_conditions/Boundary%20condition.jpg)
 
 ### Suture–Tissue Interaction
 - **MPC model:** tie constraints connecting bite-node pairs across the graft-host junction
@@ -85,15 +92,15 @@ Only the stromal layer was modelled (≈90% of total corneal thickness), which p
 ### Refractive Power Estimation
 Corneal optical power was estimated from the deformed geometry using:
 
-```
-P = (η_c − 1) / R_ext + (η_ah − η_c) / R_int
-```
+![Corneal Geometry](figures/refrative_formula/refractive_power_formula.jpg)
 
 where η_c = 1.376 (cornea), η_ah = 1.336 (aqueous humor), R_ext and R_int are the fitted anterior and posterior radii of curvature.
 
 ---
 
 ## Key Results
+
+![Corneal Geometry](results/apex_path_plots/apex%20corneal%20path.jpg)
 
 ### MPC Suture Model
 
@@ -117,6 +124,9 @@ where η_c = 1.376 (cornea), η_ah = 1.336 (aqueous humor), R_ext and R_int are 
 | Loose–tight sutures | 39.40 | 0.203 | **207.30** | 60.62 |
 | 16-suture model | **8.08** | 0.180 | **11.43** | 61.01 |
 
+![Corneal Geometry](results/stress_distribution/stress%20distribution.jpg)
+![Corneal Geometry](results/displacement_distribution/Displacement_Distribution.jpg)
+![Corneal Geometry](results/refractive_analysis/Refratic_result.jpg)
 ### Summary of Findings
 
 - **Smaller grafts** concentrate stress at the graft–host junction; **larger grafts** produce greater apex displacement
