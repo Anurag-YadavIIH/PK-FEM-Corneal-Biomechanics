@@ -30,6 +30,9 @@ This repository documents the research conducted as part of my M.Tech thesis at 
 
 The cornea contributes roughly two-thirds of the eye's total refractive power. Even small post-surgical irregularities in graft placement or suture tension can lead to clinically significant complications such as astigmatism, irregular topography, and poor visual recovery. This work provides a computational framework to understand and quantify those effects.
 
+![Workflow Diagram](assets/Thesis_brief/PK%20FEM%20Model.jpg)
+![Workflow Diagram](assets/Thesis_brief/PK%20FEM%20Optomechanical%20Analysis.jpg)
+
 ---
 
 ## Research Objectives
