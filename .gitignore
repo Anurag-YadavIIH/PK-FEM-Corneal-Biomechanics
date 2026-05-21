@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+venv/
+*.odb
+*.sim
+*.cae
